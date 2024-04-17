@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kinobilletter</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Kjøp kinobilletter</h1>
+      <form class="form">
+        <div class="form-group">
+
+          <!-- Dropdown-menu for choosing movie -->
+          <label>Velg film</label>
+          <div id="filmene"></div>
+          <div id="feilFilm" style="color: red"></div>
+        </div>
+
+        <!--Choose the amount of tickets in number-->
+        <div class="form-group">
+          <label for="antall">Antall: </label>
+          <input type="number" id="antall" min="1" max="20">
+          <div id="feilAntall" style="color:red"></div>
+        </div>
+
+        <!--Write in you name-->
+        <div class="form-group">
+          <label for="fornavn">Fornavn: </label>
+          <input type="text" class="form-control" id="fornavn"/>
+          <div id="feilFornavn" style="color:red"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="etternavn">Etternavn</label>
+          <input type="text" class="form-control" id="etternavn"/>
+          <div id="feilEtternavn" style="color:red"></div>
+        </div>
+
+        <!-- Write in email and phonenumber-->
+        <div class="form-group">
+          <label for="epost">E-post</label>
+          <input type="text" class="form-control" id="epost"/>
+          <div id="feilEpost" style="color:red"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="telefonnr">Telefonnr</label>
+          <input type="text" class="form-control" id="telefonnr"/>
+          <div id="feilTelefonnr" style="color:red"></div>
+        </div>
+
+      </form>
+      <!--Button that activates a method when clicked on-->
+      <button class="btn btn-success" onclick="bestill()">Kjøp billetter</button>
+      <button class="btn btn-sucess" onclick="visBilletter()">Vis kjøpte billetter</button>
+    </div>
+
+    <div class="col-md-8">
+      <h3>Alle billetter</h3>
+      <div id="visAlleBilletter"></div> <!--Placeholder for presenting of all the tickets-->
+      <button class="btn btn-danger" onclick="slettBilletter()">Slett billetter</button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

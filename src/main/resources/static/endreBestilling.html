@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="endreBestilling.js"></script>
+</head>
+<body>
+<h1>Endre din bestilling</h1>
+<form class="form">
+    <input type="hidden" id="id"/>
+
+    <form class="form">
+        <div class="form-group">
+
+            <!-- Dropdown-menu for choosing movie -->
+            <label for="filmene">Velg film</label>
+            <div id="filmene"></div>
+            <div id="feilFilm" style="color: red"></div>
+        </div>
+
+        <!--Choose the amount of tickets in number-->
+        <div class="form-group">
+            <label for="antall">Antall: </label>
+            <input type="number" id="antall" min="1" max="20">
+            <div id="feilAntall" style="color:red"></div>
+        </div>
+
+        <!--Write in you name-->
+        <div class="form-group">
+            <label for="fornavn">Fornavn: </label>
+            <input type="text" class="form-controll" id="fornavn"/>
+            <div id="feilFornavn" style="color:red"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="etternavn">Etternavn</label>
+            <input type="text" class="form-controll" id="etternavn"/>
+            <div id="feilEtternavn" style="color:red"></div>
+        </div>
+
+        <!-- Write in email and phonenumber-->
+        <div class="form-group">
+            <label for="telefonnr">Telefonnr</label>
+            <input type="text" class="form-controll" id="telefonnr"/>
+            <div id="feilTelefonnr" style="color:red"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="epost">E-post</label>
+            <input type="text" class="form-controll" id="epost"/>
+            <div id="feilEpost" style="color:red"></div>
+        </div>
+
+    </form>
+    <!--<input type="button" value="Endre" class="btn btn-primary" onclick="endreBestilling()"/>-->
+    <button class="btn btn-success" onclick="endreBestilling()">Endre</button>
+    <a href="index.html">Gå tilbake uten å endre</a>
+    </div>
+</form>
+</body>
+</html>
